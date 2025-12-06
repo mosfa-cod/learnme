@@ -1,0 +1,2129 @@
+ <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مملكة الكلمات الإنجليزية للأطفال (7-9 سنوات)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* CSS Styles محسنة ومتطورة */
+    :root {
+      --primary-color: #4A90E2;
+      --secondary-color: #FF6F61;
+      --accent-color: #FFD166;
+      --success-color: #06D6A0;
+      --background-color: #E0F7FA;
+      --card-bg: #FFFFFF;
+      --text-color: #333333;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --border-radius: 15px;
+      --font-arabic: 'Arial', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-arabic);
+      direction: rtl;
+      text-align: center;
+      background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      min-height: 100vh;
+    }
+    
+    /* الترويسة المحسنة */
+    header {
+      background: linear-gradient(90deg, var(--primary-color) 0%, #5D9CEC 100%);
+      color: #fff;
+      padding: 25px 10px;
+      box-shadow: var(--shadow);
+      border-bottom: 5px solid var(--accent-color);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      margin-top: 8px;
+      opacity: 0.95;
+      position: relative;
+    }
+    
+    .header-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      gap: 20px;
+      position: relative;
+    }
+    
+    .header-icons i {
+      font-size: 24px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* التنقل */
+    nav {
+      background: white;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .nav-btn {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .nav-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+    
+    .nav-btn.active {
+      background: var(--secondary-color);
+      box-shadow: 0 4px 8px rgba(255, 111, 97, 0.3);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+    
+    /* أقسام المحتوى */
+    .content-section {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .content-section.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* بطاقات الكلمات المحسنة */
+    .section-title {
+      margin: 30px 0 20px;
+      font-size: 28px;
+      color: var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 8px;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+      width: 30%;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+    
+    .category-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0 30px;
+    }
+    
+    .category-btn {
+      background: white;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .category-btn.active {
+      background: var(--primary-color);
+      color: white;
+    }
+    
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      width: 220px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 2px solid var(--primary-color);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .card-category {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--accent-color);
+      color: #333;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+    }
+    
+    .word-en {
+      font-size: 26px;
+      font-weight: bold;
+      margin: 10px 0 5px;
+      color: var(--secondary-color);
+    }
+    
+    .word-ar {
+      font-size: 18px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+    
+    .sentence {
+      font-size: 14px;
+      color: #666;
+      margin: 10px 0;
+      font-style: italic;
+      background: #f9f9f9;
+      padding: 8px;
+      border-radius: 8px;
+      border-right: 3px solid var(--accent-color);
+    }
+    
+    .card-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .btn {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    
+    .btn:hover {
+      background: var(--secondary-color);
+      transform: scale(1.05);
+    }
+    
+    .btn-sound {
+      background: var(--success-color);
+    }
+    
+    .btn-spelling {
+      background: var(--accent-color);
+      color: #333;
+    }
+    
+    /* قسم المشاركة مع الأصدقاء */
+    .share-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: var(--border-radius);
+      padding: 30px;
+      margin: 40px 0;
+      color: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .share-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .share-subtitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .share-methods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .share-method {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      width: 220px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    
+    .share-method:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+      border-color: white;
+    }
+    
+    .share-method i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .share-method h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .share-method p {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+    
+    .share-btn {
+      background: white;
+      color: #667eea;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+      width: 100%;
+    }
+    
+    .share-btn:hover {
+      background: #f0f0f0;
+      transform: scale(1.05);
+    }
+    
+    .share-link-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .link-box {
+      display: flex;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+    
+    .link-input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      font-size: 16px;
+      color: #333;
+      direction: ltr;
+      text-align: left;
+    }
+    
+    .copy-btn {
+      background: var(--success-color);
+      color: white;
+      border: none;
+      padding: 0 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    
+    .copy-btn:hover {
+      background: #05b887;
+    }
+    
+    .copy-btn.copied {
+      background: var(--primary-color);
+    }
+    
+    .invite-friends {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 25px;
+      margin-top: 30px;
+      box-shadow: var(--shadow);
+    }
+    
+    .invite-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: right;
+    }
+    
+    .form-group label {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .form-group input, .form-group textarea {
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border 0.3s;
+    }
+    
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    
+    .invite-btn {
+      background: var(--secondary-color);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    .invite-btn:hover {
+      background: #ff5252;
+      transform: translateY(-3px);
+    }
+    
+    .rewards-section {
+      background: linear-gradient(135deg, #FFD166 0%, #FFB347 100%);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      margin-top: 30px;
+      color: #333;
+    }
+    
+    .rewards-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .rewards-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .reward-item {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 20px;
+      width: 180px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .reward-item i {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .friends-stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    
+    .stat-box {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      min-width: 200px;
+    }
+    
+    .stat-number {
+      font-size: 36px;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    /* قسم الألعاب */
+    .games-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .game-box {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+      border: 2px solid var(--secondary-color);
+      transition: all 0.3s;
+    }
+    
+    .game-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    
+    .game-title {
+      font-size: 22px;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .quiz-box img {
+      max-width: 250px;
+      border-radius: 10px;
+      margin: 15px 0;
+      border: 2px solid var(--primary-color);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .option {
+      background: var(--background-color);
+      border-radius: 25px;
+      padding: 12px 24px;
+      cursor: pointer;
+      border: 2px solid var(--primary-color);
+      transition: all 0.2s;
+      font-size: 18px;
+      flex: 1;
+      min-width: 120px;
+      max-width: 200px;
+    }
+    
+    .option:hover {
+      transform: scale(1.05);
+      background: #e1f5fe;
+    }
+    
+    .option.correct {
+      border-color: #4CAF50;
+      background: #E8F5E9;
+    }
+    
+    .option.wrong {
+      border-color: #F44336;
+      background: #FFEBEE;
+    }
+    
+    .score {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 22px;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .score-value {
+      color: var(--secondary-color);
+      font-size: 28px;
+    }
+    
+    /* لعبة البازل */
+    .puzzle-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .puzzle-image {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .puzzle-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .puzzle-option {
+      background: white;
+      border: 2px dashed var(--primary-color);
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 18px;
+      cursor: move;
+      transition: all 0.2s;
+      min-width: 100px;
+      text-align: center;
+    }
+    
+    .puzzle-dropzone {
+      width: 100%;
+      min-height: 100px;
+      border: 3px dashed var(--accent-color);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #666;
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+    }
+    
+    .puzzle-dropzone.filled {
+      border: 3px solid var(--success-color);
+      background: rgba(6, 214, 160, 0.1);
+    }
+    
+    /* لعبة تكوين الجمل */
+    .sentence-builder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .word-pieces {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    
+    .word-piece {
+      background: var(--primary-color);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+    }
+    
+    .word-piece:hover {
+      background: var(--secondary-color);
+      transform: scale(1.05);
+    }
+    
+    .sentence-area {
+      width: 100%;
+      min-height: 100px;
+      border: 3px solid var(--primary-color);
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 20px;
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    /* التذييل */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 25px 10px;
+      margin-top: 50px;
+      border-top: 5px solid var(--accent-color);
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--success-color), #4CE0B3);
+      border-radius: 10px;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+    
+    /* التصميم المتجاوب */
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .card { width: 45%; }
+      .nav-buttons { gap: 5px; }
+      .nav-btn { padding: 8px 15px; font-size: 14px; }
+      .games-container { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; }
+      .share-method { width: 100%; }
+      .friends-stats { flex-direction: column; }
+    }
+    
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      .card { width: 100%; }
+      .section-title { font-size: 24px; }
+      .game-box { padding: 15px; }
+      .link-box { flex-direction: column; }
+      .copy-btn { padding: 15px; }
+    }
+    
+    /* تأثيرات خاصة */
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .bounce {
+      animation: bounce 0.5s;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    /* تحسينات الوصول */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    /* إشعارات */
+    .notification {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      background: var(--success-color);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: slideIn 0.3s ease, fadeOut 0.3s ease 2s forwards;
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><i class="fas fa-crown"></i> مملكة الكلمات الإنجليزية</h1>
+  <p class="subtitle">مغامرة تعليمية مثيرة للأطفال من 7 إلى 9 سنوات</p>
+  <div class="header-icons">
+    <i class="fas fa-book-open"></i>
+    <i class="fas fa-gamepad"></i>
+    <i class="fas fa-music"></i>
+    <i class="fas fa-puzzle-piece"></i>
+    <i class="fas fa-share-alt"></i>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-buttons">
+    <button class="nav-btn active" data-section="learn">
+      <i class="fas fa-book"></i> تعلم الكلمات
+    </button>
+    <button class="nav-btn" data-section="games">
+      <i class="fas fa-gamepad"></i> الألعاب
+    </button>
+    <button class="nav-btn" data-section="sentences">
+      <i class="fas fa-comment-dots"></i> الجمل المفيدة
+    </button>
+    <button class="nav-btn" data-section="puzzle">
+      <i class="fas fa-puzzle-piece"></i> ألغاز الذكاء
+    </button>
+    <button class="nav-btn" data-section="share">
+      <i class="fas fa-share-alt"></i> شارك مع أصدقائك
+    </button>
+    <button class="nav-btn" data-section="progress">
+      <i class="fas fa-chart-line"></i> تقدمي
+    </button>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- قسم تعلم الكلمات -->
+  <section id="learn" class="content-section active">
+    <h2 class="section-title"><i class="fas fa-book-open"></i> تعلم الكلمات الجديدة</h2>
+    
+    <div class="category-filter">
+      <button class="category-btn active" data-category="all">الكل</button>
+      <button class="category-btn" data-category="animals">الحيوانات</button>
+      <button class="category-btn" data-category="food">الطعام</button>
+      <button class="category-btn" data-category="objects">الأشياء</button>
+      <button class="category-btn" data-category="nature">الطبيعة</button>
+      <button class="category-btn" data-category="family">العائلة</button>
+    </div>
+    
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <!-- قسم الألعاب -->
+  <section id="games" class="content-section">
+    <h2 class="section-title"><i class="fas fa-gamepad"></i> الألعاب التعليمية</h2>
+    
+    <div class="games-container">
+      <div class="game-box">
+        <h3 class="game-title"><i class="fas fa-question-circle"></i> اختر الإجابة الصحيحة</h3>
+        <p id="quiz-question">اضغط على زر "سؤال جديد" لبدء اللعبة!</p>
+        <div id="quiz-image-placeholder"></div>
+        <div class="options" id="options"></div>
+        <button class="btn" onclick="newQuizQuestion()">
+          <i class="fas fa-redo"></i> سؤال جديد
+        </button>
+        <p class="score"><i class="fas fa-star"></i> النقاط: <span id="score" class="score-value">0</span></p>
+      </div>
+      
+      <div class="game-box">
+        <h3 class="game-title"><i class="fas fa-spell-check"></i> تهجئة الكلمة</h3>
+        <p id="spelling-question">ما هي الكلمة التي تمثل هذه الصورة؟</p>
+        <div id="spelling-image"></div>
+        <div class="puzzle-container">
+          <div class="word-pieces" id="spelling-letters"></div>
+          <div class="sentence-area" id="spelling-area"></div>
+        </div>
+        <button class="btn" onclick="newSpellingGame()">
+          <i class="fas fa-redo"></i> كلمة جديدة
+        </button>
+        <p class="score"><i class="fas fa-check-circle"></i> الصحيح: <span id="spelling-score">0</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الجمل المفيدة -->
+  <section id="sentences" class="content-section">
+    <h2 class="section-title"><i class="fas fa-comment-dots"></i> الجمل المفيدة</h2>
+    
+    <div class="game-box">
+      <h3 class="game-title"><i class="fas fa-language"></i> كون جملة صحيحة</h3>
+      <p>رتب الكلمات لتكوين جملة مفيدة:</p>
+      <div id="sentence-pieces" class="word-pieces"></div>
+      <div class="sentence-area" id="sentence-area"></div>
+      <button class="btn" onclick="checkSentence()">
+        <i class="fas fa-check"></i> تحقق من الجملة
+      </button>
+      <button class="btn" onclick="newSentenceGame()">
+        <i class="fas fa-redo"></i> جملة جديدة
+      </button>
+      <p id="sentence-result" class="score"></p>
+    </div>
+    
+    <div class="cards" id="sentence-cards"></div>
+  </section>
+
+  <!-- قسم ألغاز الذكاء -->
+  <section id="puzzle" class="content-section">
+    <h2 class="section-title"><i class="fas fa-puzzle-piece"></i> ألغاز الذكاء</h2>
+    
+    <div class="games-container">
+      <div class="game-box">
+        <h3 class="game-title"><i class="fas fa-brain"></i> لغز اليوم</h3>
+        <div id="puzzle-of-day">
+          <p class="puzzle-question">ما هو الشيء الذي يملك أسنانًا لكنه لا يعض؟</p>
+          <div class="options">
+            <div class="option" onclick="checkPuzzleAnswer(this, 'المشط')">المشط</div>
+            <div class="option" onclick="checkPuzzleAnswer(this, 'الأسد')">الأسد</div>
+            <div class="option" onclick="checkPuzzleAnswer(this, 'المنشار')">المنشار</div>
+            <div class="option" onclick="checkPuzzleAnswer(this, 'الثعبان')">الثعبان</div>
+          </div>
+          <p id="puzzle-result" class="score"></p>
+        </div>
+      </div>
+      
+      <div class="game-box">
+        <h3 class="game-title"><i class="fas fa-shapes"></i> مطابقة الصور</h3>
+        <p>اسحب الكلمة إلى الصورة المناسبة:</p>
+        <div class="puzzle-container">
+          <img id="puzzle-image" class="puzzle-image" src="" alt="صورة اللغز">
+          <div class="puzzle-options" id="puzzle-word-options"></div>
+          <div class="puzzle-dropzone" id="puzzle-dropzone">
+            اسحب الكلمة الصحيحة إلى هنا
+          </div>
+        </div>
+        <button class="btn" onclick="newPuzzleGame()">
+          <i class="fas fa-redo"></i> لغز جديد
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم المشاركة مع الأصدقاء -->
+  <section id="share" class="content-section">
+    <div class="share-section">
+      <h2 class="share-title"><i class="fas fa-share-alt"></i> شارك مع أصدقائك</h2>
+      <p class="share-subtitle">دع أصدقاءك يستمتعون بتعلم الإنجليزية معك واحصل على مكافآت رائعة!</p>
+      
+      <div class="share-methods">
+        <div class="share-method">
+          <i class="fas fa-link" style="color: #4A90E2;"></i>
+          <h3>رابط الموقع</h3>
+          <p>انسخ رابط الموقع وأرسله لأصدقائك</p>
+          <button class="share-btn" onclick="copyWebsiteLink()">
+            <i class="fas fa-copy"></i> نسخ الرابط
+          </button>
+        </div>
+        
+        <div class="share-method">
+          <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+          <h3>واتساب</h3>
+          <p>شارك الموقع مع أصدقائك على واتساب</p>
+          <button class="share-btn" onclick="shareOnWhatsApp()">
+            <i class="fab fa-whatsapp"></i> مشاركة
+          </button>
+        </div>
+        
+        <div class="share-method">
+          <i class="fas fa-envelope" style="color: #EA4335;"></i>
+          <h3>البريد الإلكتروني</h3>
+          <p>أرسل دعوة لأصدقائك عبر البريد</p>
+          <button class="share-btn" onclick="shareByEmail()">
+            <i class="fas fa-envelope"></i> إرسال دعوة
+          </button>
+        </div>
+      </div>
+      
+      <div class="share-link-container">
+        <h3><i class="fas fa-paper-plane"></i> رابط موقعك الخاص:</h3>
+        <div class="link-box">
+          <input type="text" id="website-link" value="https://kidswordslearning.com" class="link-input" readonly>
+          <button class="copy-btn" onclick="copyToClipboard()">
+            <i class="fas fa-copy"></i> نسخ
+          </button>
+        </div>
+        <p style="margin-top: 10px; font-size: 14px; opacity: 0.9;">انسخ هذا الرابط وأرسله لأصدقائك</p>
+      </div>
+    </div>
+    
+    <div class="invite-friends">
+      <h2 class="section-title"><i class="fas fa-user-friends"></i> ادعو أصدقائك مباشرة</h2>
+      
+      <div class="invite-form">
+        <div class="form-group">
+          <label for="friend-name"><i class="fas fa-user"></i> اسم صديقك:</label>
+          <input type="text" id="friend-name" placeholder="أدخل اسم صديقك">
+        </div>
+        
+        <div class="form-group">
+          <label for="friend-email"><i class="fas fa-envelope"></i> بريد صديقك الإلكتروني:</label>
+          <input type="email" id="friend-email" placeholder="example@email.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="invite-message"><i class="fas fa-comment"></i> رسالة الدعوة:</label>
+          <textarea id="invite-message" rows="3" placeholder="مرحباً! أريد دعوتك لزيارة موقع رائع لتعليم الإنجليزية للأطفال...">مرحباً! أريد دعوتك لزيارة موقع رائع لتعليم الإنجليزية للأطفال. إنه ممتع جداً ويحتوي على ألعاب تعليمية مسلية!</textarea>
+        </div>
+        
+        <button class="invite-btn" onclick="sendInvitation()">
+          <i class="fas fa-paper-plane"></i> أرسل الدعوة
+        </button>
+      </div>
+    </div>
+    
+    <div class="rewards-section">
+      <h2 class="rewards-title"><i class="fas fa-gift"></i> مكافآت دعوة الأصدقاء</h2>
+      <p>احصل على مكافآت رائعة عند دعوة أصدقائك لزيارة الموقع!</p>
+      
+      <div class="rewards-list">
+        <div class="reward-item">
+          <i class="fas fa-user-plus"></i>
+          <h3>صديق واحد</h3>
+          <p>+50 نقطة</p>
+        </div>
+        
+        <div class="reward-item">
+          <i class="fas fa-users"></i>
+          <h3>3 أصدقاء</h3>
+          <p>+200 نقطة</p>
+        </div>
+        
+        <div class="reward-item">
+          <i class="fas fa-trophy"></i>
+          <h3>5 أصدقاء</h3>
+          <p>شارة خاصة</p>
+        </div>
+        
+        <div class="reward-item">
+          <i class="fas fa-crown"></i>
+          <h3>10 أصدقاء</h3>
+          <p>مفاجأة خاصة</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="friends-stats">
+      <div class="stat-box">
+        <div class="stat-number" id="invited-friends">0</div>
+        <p>أصدقاء دعوتهم</p>
+      </div>
+      
+      <div class="stat-box">
+        <div class="stat-number" id="friends-points">0</div>
+        <p>نقاط من الدعوات</p>
+      </div>
+      
+      <div class="stat-box">
+        <div class="stat-number" id="total-rewards">0</div>
+        <p>مكافآت حصلت عليها</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم التقدم -->
+  <section id="progress" class="content-section">
+    <h2 class="section-title"><i class="fas fa-chart-line"></i> تقدمي في التعلم</h2>
+    
+    <div class="game-box">
+      <h3 class="game-title"><i class="fas fa-trophy"></i> إنجازاتي</h3>
+      
+      <div class="progress-section">
+        <p>الكلمات التي تعلمتها: <span id="learned-words">0</span> من <span id="total-words">0</span></p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="words-progress"></div>
+        </div>
+      </div>
+      
+      <div class="progress-section">
+        <p>نقاط الألعاب: <span id="total-points">0</span> نقطة</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="points-progress"></div>
+        </div>
+      </div>
+      
+      <div class="progress-section">
+        <p>الجمل التي كونت: <span id="built-sentences">0</span> جملة</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="sentences-progress"></div>
+        </div>
+      </div>
+      
+      <div class="cards" id="achievements"></div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <h3><i class="fas fa-graduation-cap"></i> مملكة الكلمات الإنجليزية</h3>
+      <p>منصة تعليمية تفاعلية للأطفال</p>
+      <div style="margin-top: 10px;">
+        <button class="btn" onclick="shareWebsite()" style="background: white; color: var(--primary-color);">
+          <i class="fas fa-share-alt"></i> شارك الموقع
+        </button>
+      </div>
+    </div>
+    <div>
+      <p>© 2023 جميع الحقوق محفوظة</p>
+      <p>صمم بحب لمساعدة الأطفال على تعلم الإنجليزية</p>
+      <p style="margin-top: 10px; font-size: 14px;">
+        <i class="fas fa-heart" style="color: #FF6F61;"></i> شارك الموقع مع أصدقائك!
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- إشعارات -->
+<div id="notification" class="notification" style="display: none;">
+  <i class="fas fa-check-circle"></i>
+  <span id="notification-text">تم الحفظ بنجاح!</span>
+</div>
+
+<script>
+  // ================== بيانات الموقع المحسنة ==================
+  const words = [
+    { en: "Apple", ar: "تفاحة", category: "food", image: "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=300&h=200&fit=crop", sentence: "I eat an apple every day.", audio: "apple" },
+    { en: "Cat", ar: "قطة", category: "animals", image: "https://images.unsplash.com/photo-1514888286974-6d03bde4ba04?w=300&h=200&fit=crop", sentence: "The cat is sleeping on the sofa.", audio: "cat" },
+    { en: "Dog", ar: "كلب", category: "animals", image: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=300&h=200&fit=crop", sentence: "My dog likes to play with the ball.", audio: "dog" },
+    { en: "Car", ar: "سيارة", category: "objects", image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=300&h=200&fit=crop", sentence: "We drive a red car.", audio: "car" },
+    { en: "Sun", ar: "شمس", category: "nature", image: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=300&h=200&fit=crop", sentence: "The sun is shining today.", audio: "sun" },
+    { en: "Book", ar: "كتاب", category: "objects", image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=200&fit=crop", sentence: "I read a book before bedtime.", audio: "book" },
+    { en: "Lion", ar: "أسد", category: "animals", image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=300&h=200&fit=crop", sentence: "The lion is the king of the jungle.", audio: "lion" },
+    { en: "House", ar: "منزل", category: "objects", image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=300&h=200&fit=crop", sentence: "We live in a big house.", audio: "house" },
+    { en: "Flower", ar: "زهرة", category: "nature", image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300&h=200&fit=crop", sentence: "This flower has a nice smell.", audio: "flower" },
+    { en: "Family", ar: "عائلة", category: "family", image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=300&h=200&fit=crop", sentence: "I love my family.", audio: "family" },
+    { en: "Teacher", ar: "معلم", category: "family", image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=300&h=200&fit=crop", sentence: "My teacher is very kind.", audio: "teacher" },
+    { en: "Ball", ar: "كرة", category: "objects", image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=300&h=200&fit=crop", sentence: "The children are playing with a ball.", audio: "ball" }
+  ];
+
+  const sentences = [
+    { ar: "القطة نائمة على الأريكة", en: "The cat is sleeping on the sofa", words: ["The", "cat", "is", "sleeping", "on", "the", "sofa"] },
+    { ar: "أنا آكل تفاحة كل يوم", en: "I eat an apple every day", words: ["I", "eat", "an", "apple", "every", "day"] },
+    { ar: "الشمس تشرق اليوم", en: "The sun is shining today", words: ["The", "sun", "is", "shining", "today"] },
+    { ar: "الأسد هو ملك الغابة", en: "The lion is the king of the jungle", words: ["The", "lion", "is", "the", "king", "of", "the", "jungle"] },
+    { ar: "أحب عائلتي", en: "I love my family", words: ["I", "love", "my", "family"] },
+    { ar: "نحن نعيش في منزل كبير", en: "We live in a big house", words: ["We", "live", "in", "a", "big", "house"] }
+  ];
+
+  const puzzles = [
+    { question: "ما هو الشيء الذي يملك أسنانًا لكنه لا يعض؟", answer: "المشط", options: ["المشط", "الأسد", "المنشار", "الثعبان"] },
+    { question: "أخت خالك وليست خالتك، فمن تكون؟", answer: "أمك", options: ["أمك", "خالتك", "جدتك", "عمتك"] },
+    { question: "ما هو الشيء الذي كلما أخذت منه كبر؟", answer: "الحفرة", options: ["الحفرة", "البالون", "الصحن", "الكتاب"] },
+    { question: "أسود عندما أكون نظيفاً، وأحمر عندما أكون متسخاً، فمن أكون؟", answer: "السبورة", options: ["السبورة", "القلم", "الكتاب", "الممحاة"] }
+  ];
+
+  // ================== الحالة والمتغيرات ==================
+  let currentCategory = "all";
+  let quizScore = 0;
+  let spellingScore = 0;
+  let sentencesBuilt = 0;
+  let learnedWords = new Set();
+  let invitedFriends = 0;
+  let friendsPoints = 0;
+  let totalRewards = 0;
+
+  // ================== تهيئة الصفحة ==================
+  document.addEventListener('DOMContentLoaded', function() {
+    // تحميل البيانات المحفوظة
+    loadSavedData();
+    
+    // تهيئة التنقل بين الأقسام
+    initNavigation();
+    
+    // إنشاء بطاقات الكلمات
+    createWordCards();
+    
+    // إنشاء بطاقات الجمل
+    createSentenceCards();
+    
+    // إنشاء إنجازات
+    createAchievements();
+    
+    // تحديث شريط التقدم
+    updateProgress();
+    
+    // بدء الألعاب
+    newQuizQuestion();
+    newSpellingGame();
+    newSentenceGame();
+    newPuzzleGame();
+    
+    // تفعيل سحب وإفلات البازل
+    initDragAndDrop();
+    
+    // تحديث إحصائيات الأصدقاء
+    updateFriendsStats();
+    
+    // بدء اللعبة الأولى
+    setTimeout(() => {
+      showNotification("مرحباً في مملكة الكلمات! هيا نبدأ التعلم");
+    }, 1000);
+  });
+
+  // ================== وظائف حفظ البيانات ==================
+  function saveData() {
+    const data = {
+      learnedWords: Array.from(learnedWords),
+      quizScore,
+      spellingScore,
+      sentencesBuilt,
+      invitedFriends,
+      friendsPoints,
+      totalRewards
+    };
+    
+    localStorage.setItem('kidsEnglishLearningData', JSON.stringify(data));
+  }
+
+  function loadSavedData() {
+    const savedData = localStorage.getItem('kidsEnglishLearningData');
+    
+    if (savedData) {
+      const data = JSON.parse(savedData);
+      
+      learnedWords = new Set(data.learnedWords || []);
+      quizScore = data.quizScore || 0;
+      spellingScore = data.spellingScore || 0;
+      sentencesBuilt = data.sentencesBuilt || 0;
+      invitedFriends = data.invitedFriends || 0;
+      friendsPoints = data.friendsPoints || 0;
+      totalRewards = data.totalRewards || 0;
+    }
+  }
+
+  // ================== وظائف المشاركة مع الأصدقاء ==================
+  function copyWebsiteLink() {
+    const linkInput = document.getElementById('website-link');
+    linkInput.select();
+    linkInput.setSelectionRange(0, 99999); // للجوال
+    
+    try {
+      navigator.clipboard.writeText(linkInput.value).then(() => {
+        showNotification("تم نسخ رابط الموقع إلى الحافظة!");
+        
+        // إضافة نقاط للمستخدم
+        friendsPoints += 5;
+        updateFriendsStats();
+        saveData();
+        
+        // تأثير زر النسخ
+        const copyBtn = document.querySelector('.copy-btn');
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> تم النسخ';
+        copyBtn.classList.add('copied');
+        
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      });
+    } catch (err) {
+      // طريقة بديلة للمتصفحات القديمة
+      document.execCommand('copy');
+      showNotification("تم نسخ الرابط!");
+      
+      friendsPoints += 5;
+      updateFriendsStats();
+      saveData();
+    }
+  }
+
+  function shareOnWhatsApp() {
+    const message = "مرحباً! اكتشفت موقعاً رائعاً لتعليم الإنجليزية للأطفال: https://kidswordslearning.com - جربه الآن!";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    // إضافة نقاط
+    friendsPoints += 10;
+    invitedFriends += 1;
+    updateFriendsStats();
+    saveData();
+    
+    showNotification("تم فتح واتساب للمشاركة! +10 نقاط");
+  }
+
+  function shareByEmail() {
+    const subject = "دعوة لموقع تعليم الإنجليزية للأطفال";
+    const body = `مرحباً!
+
+أريد دعوتك لزيارة موقع رائع لتعليم الإنجليزية للأطفال:
+
+https://kidswordslearning.com
+
+الموقع يحتوي على:
+- تعلم الكلمات بالصور والصوت
+- ألعاب تعليمية مسلية
+- ألغاز ذكاء ممتعة
+- جمل مفيدة باللغة الإنجليزية
+
+جربه مع أطفالك، إنه ممتع ومفيد!
+
+مع تحياتي`;
+    
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    const mailtoLink = `mailto:?subject=${encodedSubject}&body=${encodedBody}`;
+    
+    window.location.href = mailtoLink;
+    
+    // إضافة نقاط
+    friendsPoints += 15;
+    invitedFriends += 1;
+    updateFriendsStats();
+    saveData();
+    
+    showNotification("تم فتح بريدك الإلكتروني لإرسال الدعوة! +15 نقطة");
+  }
+
+  function copyToClipboard() {
+    const linkInput = document.getElementById('website-link');
+    linkInput.select();
+    linkInput.setSelectionRange(0, 99999);
+    
+    try {
+      navigator.clipboard.writeText(linkInput.value).then(() => {
+        showNotification("تم نسخ الرابط!");
+        
+        const copyBtn = document.querySelector('.copy-btn');
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> تم النسخ';
+        copyBtn.classList.add('copied');
+        
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+        
+        friendsPoints += 5;
+        updateFriendsStats();
+        saveData();
+      });
+    } catch (err) {
+      document.execCommand('copy');
+      showNotification("تم نسخ الرابط!");
+      
+      friendsPoints += 5;
+      updateFriendsStats();
+      saveData();
+    }
+  }
+
+  function sendInvitation() {
+    const friendName = document.getElementById('friend-name').value.trim();
+    const friendEmail = document.getElementById('friend-email').value.trim();
+    const message = document.getElementById('invite-message').value;
+    
+    if (!friendName) {
+      showNotification("الرجاء إدخال اسم صديقك");
+      return;
+    }
+    
+    if (!friendEmail) {
+      showNotification("الرجاء إدخال بريد صديقك الإلكتروني");
+      return;
+    }
+    
+    // في الواقع، هنا نرسل البريد عبر API
+    // لكن في هذا المثال، سنقوم بمحاكاة الإرسال
+    
+    const subject = `دعوة من ${friendName} لزيارة موقع تعليم الإنجليزية`;
+    const body = `${message}
+
+رابط الموقع: https://kidswordslearning.com
+
+مع تحيات،
+${friendName}`;
+    
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    const mailtoLink = `mailto:${friendEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+    
+    window.location.href = mailtoLink;
+    
+    // تحديث الإحصائيات
+    invitedFriends += 1;
+    friendsPoints += 20;
+    
+    // حساب المكافآت
+    if (invitedFriends === 1) {
+      totalRewards += 1;
+      showNotification(`تم إرسال الدعوة! +20 نقطة. مكافأة: حصلت على 50 نقطة إضافية!`);
+      quizScore += 50;
+    } else if (invitedFriends === 3) {
+      totalRewards += 1;
+      showNotification(`ممتاز! دعوت 3 أصدقاء. مكافأة: حصلت على 200 نقطة إضافية!`);
+      quizScore += 200;
+    } else if (invitedFriends === 5) {
+      totalRewards += 1;
+      showNotification(`رائع! دعوت 5 أصدقاء. مكافأة: حصلت على شارة خاصة!`);
+    } else if (invitedFriends === 10) {
+      totalRewards += 1;
+      showNotification(`مذهل! دعوت 10 أصدقاء. مكافأة: حصلت على مفاجأة خاصة!`);
+    } else {
+      showNotification(`تم إرسال الدعوة إلى ${friendName}! +20 نقطة`);
+    }
+    
+    // تحديث الإحصائيات
+    updateFriendsStats();
+    updateProgress();
+    saveData();
+    
+    // تفريغ الحقول
+    document.getElementById('friend-name').value = '';
+    document.getElementById('friend-email').value = '';
+  }
+
+  function shareWebsite() {
+    // عرض خيارات المشاركة
+    if (navigator.share) {
+      navigator.share({
+        title: 'مملكة الكلمات الإنجليزية',
+        text: 'اكتشف موقعاً رائعاً لتعليم الإنجليزية للأطفال!',
+        url: 'https://kidswordslearning.com',
+      })
+      .then(() => {
+        friendsPoints += 10;
+        invitedFriends += 1;
+        updateFriendsStats();
+        saveData();
+        showNotification('شكراً للمشاركة! +10 نقاط');
+      })
+      .catch((error) => {
+        console.log('Error sharing:', error);
+        copyWebsiteLink();
+      });
+    } else {
+      copyWebsiteLink();
+    }
+  }
+
+  function updateFriendsStats() {
+    document.getElementById('invited-friends').textContent = invitedFriends;
+    document.getElementById('friends-points').textContent = friendsPoints;
+    document.getElementById('total-rewards').textContent = totalRewards;
+  }
+
+  // ================== وظائف التنقل ==================
+  function initNavigation() {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const sections = document.querySelectorAll('.content-section');
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    
+    // التنقل بين الأقسام الرئيسية
+    navButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetSection = this.getAttribute('data-section');
+        
+        // تحديث الأزرار النشطة
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // إظهار القسم المحدد
+        sections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === targetSection) {
+            section.classList.add('active');
+          }
+        });
+        
+        // تأثير الانتقال
+        this.classList.add('bounce');
+        setTimeout(() => this.classList.remove('bounce'), 500);
+      });
+    });
+    
+    // تصفية الكلمات حسب التصنيف
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        currentCategory = this.getAttribute('data-category');
+        
+        // تحديث أزرار التصنيف النشطة
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // تصفية البطاقات
+        filterCardsByCategory();
+      });
+    });
+  }
+
+  // ================== وظائف بطاقات الكلمات ==================
+  function createWordCards() {
+    const cardsContainer = document.getElementById('cards');
+    cardsContainer.innerHTML = '';
+    
+    words.forEach((word, index) => {
+      const card = document.createElement('div');
+      card.className = `card ${word.category}`;
+      card.setAttribute('data-category', word.category);
+      
+      card.innerHTML = `
+        <div class="card-category">${getCategoryName(word.category)}</div>
+        <img src="${word.image}" alt="${word.en}" loading="lazy">
+        <div class="word-en">${word.en}</div>
+        <div class="word-ar">${word.ar}</div>
+        <div class="sentence">${word.sentence}</div>
+        <div class="card-buttons">
+          <button class="btn btn-sound" onclick="playWordSound(${index}, event)">
+            <i class="fas fa-volume-up"></i> استمع
+          </button>
+          <button class="btn btn-spelling" onclick="showWordSpelling('${word.en}', event)">
+            <i class="fas fa-spell-check"></i> تهجئة
+          </button>
+          <button class="btn" onclick="markAsLearned(${index}, event)">
+            <i class="fas fa-check"></i> تعلمت
+          </button>
+        </div>
+      `;
+      
+      cardsContainer.appendChild(card);
+    });
+  }
+
+  function filterCardsByCategory() {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+      if (currentCategory === 'all' || card.getAttribute('data-category') === currentCategory) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function getCategoryName(category) {
+    const categories = {
+      'animals': 'الحيوانات',
+      'food': 'الطعام',
+      'objects': 'الأشياء',
+      'nature': 'الطبيعة',
+      'family': 'العائلة'
+    };
+    
+    return categories[category] || category;
+  }
+
+  // ================== وظائف الصوت المحسنة للجوال ==================
+  function playWordSound(index, event) {
+    if (event) event.stopPropagation();
+    
+    const word = words[index];
+    
+    // محاولة تشغيل الصوت باستخدام Web Speech API
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(word.en);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.8;
+      utterance.pitch = 1.2;
+      
+      utterance.onend = function() {
+        showNotification(`تم نطق كلمة: ${word.en}`);
+      };
+      
+      speechSynthesis.speak(utterance);
+      
+      // تحديث حالة الكلمة كمتعلمة
+      if (!learnedWords.has(index)) {
+        learnedWords.add(index);
+        updateProgress();
+        saveData();
+        showNotification(`أحسنت! تعلمت كلمة جديدة: ${word.en}`);
+      }
+    } else {
+      playFallbackSound();
+      alert(`الكلمة هي: ${word.en}`);
+    }
+  }
+
+  function playFallbackSound() {
+    try {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      
+      oscillator.start();
+      oscillator.stop(audioContext.currentTime + 0.3);
+    } catch (e) {
+      console.log("المتصفح لا يدعم تشغيل الصوت");
+    }
+  }
+
+  function showWordSpelling(word, event) {
+    if (event) event.stopPropagation();
+    
+    const letters = word.split('').join(' - ');
+    showNotification(`تهجئة ${word}: ${letters}`);
+    
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(`Spelling: ${word}`);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.7;
+      speechSynthesis.speak(utterance);
+    }
+  }
+
+  function markAsLearned(index, event) {
+    if (event) event.stopPropagation();
+    
+    learnedWords.add(index);
+    updateProgress();
+    saveData();
+    
+    const card = event.target.closest('.card');
+    card.style.borderColor = '#06D6A0';
+    card.style.boxShadow = '0 0 15px rgba(6, 214, 160, 0.5)';
+    
+    showNotification(`أحسنت! أضفت "${words[index].en}" إلى الكلمات المتعلمة`);
+  }
+
+  // ================== وظائف لعبة الاختيار ==================
+  let currentQuizAnswer = null;
+
+  function newQuizQuestion() {
+    const optionsDiv = document.getElementById('options');
+    const quizQuestion = document.getElementById('quiz-question');
+    const quizImage = document.getElementById('quiz-image-placeholder');
+    
+    optionsDiv.innerHTML = '';
+    
+    const correctIndex = Math.floor(Math.random() * words.length);
+    currentQuizAnswer = words[correctIndex];
+    
+    quizQuestion.textContent = `ما الكلمة الإنجليزية الصحيحة لهذه الصورة؟ (${currentQuizAnswer.ar})`;
+    quizImage.innerHTML = `<img src="${currentQuizAnswer.image}" alt="quiz image" class="puzzle-image">`;
+    
+    const wrongOptions = words
+      .filter((word, index) => index !== correctIndex)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+    
+    const allOptions = [currentQuizAnswer, ...wrongOptions].sort(() => Math.random() - 0.5);
+    
+    allOptions.forEach(option => {
+      const div = document.createElement('div');
+      div.className = 'option';
+      div.textContent = option.en;
+      div.onclick = () => checkQuizAnswer(div, option.en);
+      optionsDiv.appendChild(div);
+    });
+  }
+
+  function checkQuizAnswer(element, chosen) {
+    const allOptions = document.querySelectorAll('#options .option');
+    
+    allOptions.forEach(o => o.onclick = null);
+    
+    if (chosen === currentQuizAnswer.en) {
+      element.classList.add('correct');
+      quizScore += 10;
+      document.getElementById('score').textContent = quizScore;
+      playFallbackSound();
+      showNotification(`إجابة صحيحة! +10 نقاط`);
+      
+      const wordIndex = words.findIndex(w => w.en === currentQuizAnswer.en);
+      if (!learnedWords.has(wordIndex)) {
+        learnedWords.add(wordIndex);
+      }
+    } else {
+      element.classList.add('wrong');
+      
+      allOptions.forEach(o => {
+        if (o.textContent === currentQuizAnswer.en) {
+          o.classList.add('correct');
+        }
+      });
+      
+      showNotification(`الجواب الصحيح هو: ${currentQuizAnswer.en}`);
+    }
+    
+    updateProgress();
+    saveData();
+    
+    setTimeout(() => {
+      if (quizScore < 100) {
+        newQuizQuestion();
+      }
+    }, 2000);
+  }
+
+  // ================== وظائف لعبة التهجئة ==================
+  let currentSpellingWord = null;
+
+  function newSpellingGame() {
+    const spellingImage = document.getElementById('spelling-image');
+    const spellingLetters = document.getElementById('spelling-letters');
+    const spellingArea = document.getElementById('spelling-area');
+    const spellingQuestion = document.getElementById('spelling-question');
+    
+    spellingLetters.innerHTML = '';
+    spellingArea.innerHTML = '';
+    
+    currentSpellingWord = words[Math.floor(Math.random() * words.length)];
+    
+    spellingQuestion.textContent = `رتب الحروف لتكون كلمة: ${currentSpellingWord.ar}`;
+    spellingImage.innerHTML = `<img src="${currentSpellingWord.image}" alt="spelling image" class="puzzle-image">`;
+    
+    const letters = currentSpellingWord.en.split('');
+    const shuffledLetters = [...letters].sort(() => Math.random() - 0.5);
+    
+    shuffledLetters.forEach(letter => {
+      const span = document.createElement('div');
+      span.className = 'word-piece';
+      span.textContent = letter;
+      span.draggable = true;
+      span.ondragstart = (e) => e.dataTransfer.setData('text/plain', letter);
+      span.onclick = () => addLetterToSpelling(letter);
+      spellingLetters.appendChild(span);
+    });
+    
+    spellingArea.ondragover = (e) => e.preventDefault();
+    spellingArea.ondrop = (e) => {
+      e.preventDefault();
+      const letter = e.dataTransfer.getData('text/plain');
+      addLetterToSpelling(letter);
+    };
+  }
+
+  function addLetterToSpelling(letter) {
+    const spellingArea = document.getElementById('spelling-area');
+    const span = document.createElement('span');
+    span.textContent = letter;
+    span.className = 'word-piece';
+    spellingArea.appendChild(span);
+    
+    if (spellingArea.children.length === currentSpellingWord.en.length) {
+      checkSpellingAnswer();
+    }
+  }
+
+  function checkSpellingAnswer() {
+    const spellingArea = document.getElementById('spelling-area');
+    const userAnswer = Array.from(spellingArea.children)
+      .map(span => span.textContent)
+      .join('');
+    
+    if (userAnswer === currentSpellingWord.en) {
+      spellingScore += 15;
+      document.getElementById('spelling-score').textContent = spellingScore;
+      showNotification(`تهانينا! كلمة صحيحة: ${currentSpellingWord.en}`);
+      spellingArea.style.borderColor = '#06D6A0';
+      
+      const wordIndex = words.findIndex(w => w.en === currentSpellingWord.en);
+      if (!learnedWords.has(wordIndex)) {
+        learnedWords.add(wordIndex);
+      }
+    } else {
+      showNotification(`حاول مرة أخرى! الكلمة الصحيحة: ${currentSpellingWord.en}`);
+      spellingArea.style.borderColor = '#F44336';
+      
+      setTimeout(() => {
+        newSpellingGame();
+      }, 2000);
+    }
+    
+    updateProgress();
+    saveData();
+  }
+
+  // ================== وظائف لعبة الجمل ==================
+  let currentSentence = null;
+
+  function createSentenceCards() {
+    const container = document.getElementById('sentence-cards');
+    container.innerHTML = '';
+    
+    sentences.forEach(sentence => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      
+      card.innerHTML = `
+        <div class="word-en">${sentence.en}</div>
+        <div class="word-ar">${sentence.ar}</div>
+        <div class="sentence">${sentence.en}</div>
+        <div class="card-buttons">
+          <button class="btn btn-sound" onclick="playSentenceSound('${sentence.en}')">
+            <i class="fas fa-volume-up"></i> استمع للجملة
+          </button>
+        </div>
+      `;
+      
+      container.appendChild(card);
+    });
+  }
+
+  function newSentenceGame() {
+    const piecesContainer = document.getElementById('sentence-pieces');
+    const sentenceArea = document.getElementById('sentence-area');
+    const resultElement = document.getElementById('sentence-result');
+    
+    piecesContainer.innerHTML = '';
+    sentenceArea.innerHTML = '';
+    resultElement.textContent = '';
+    
+    currentSentence = sentences[Math.floor(Math.random() * sentences.length)];
+    
+    const shuffledWords = [...currentSentence.words].sort(() => Math.random() - 0.5);
+    
+    shuffledWords.forEach(word => {
+      const span = document.createElement('div');
+      span.className = 'word-piece';
+      span.textContent = word;
+      span.draggable = true;
+      span.ondragstart = (e) => e.dataTransfer.setData('text/plain', word);
+      span.onclick = () => addWordToSentence(word);
+      piecesContainer.appendChild(span);
+    });
+    
+    sentenceArea.ondragover = (e) => e.preventDefault();
+    sentenceArea.ondrop = (e) => {
+      e.preventDefault();
+      const word = e.dataTransfer.getData('text/plain');
+      addWordToSentence(word);
+    };
+  }
+
+  function addWordToSentence(word) {
+    const sentenceArea = document.getElementById('sentence-area');
+    const span = document.createElement('span');
+    span.textContent = word;
+    span.className = 'word-piece';
+    sentenceArea.appendChild(span);
+  }
+
+  function checkSentence() {
+    const sentenceArea = document.getElementById('sentence-area');
+    const resultElement = document.getElementById('sentence-result');
+    
+    const userAnswer = Array.from(sentenceArea.children)
+      .map(span => span.textContent)
+      .join(' ');
+    
+    if (userAnswer === currentSentence.en) {
+      resultElement.textContent = `أحسنت! جملة صحيحة: ${currentSentence.en}`;
+      resultElement.style.color = '#06D6A0';
+      sentencesBuilt++;
+      
+      showNotification(`ممتاز! كونت جملة صحيحة: ${currentSentence.ar}`);
+    } else {
+      resultElement.textContent = `حاول مرة أخرى! الجملة الصحيحة: ${currentSentence.en}`;
+      resultElement.style.color = '#F44336';
+    }
+    
+    updateProgress();
+    saveData();
+  }
+
+  function playSentenceSound(sentence) {
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(sentence);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.8;
+      speechSynthesis.speak(utterance);
+    }
+  }
+
+  // ================== وظائف ألغاز الذكاء ==================
+  let currentPuzzleIndex = 0;
+
+  function newPuzzleGame() {
+    const puzzleImage = document.getElementById('puzzle-image');
+    const wordOptions = document.getElementById('puzzle-word-options');
+    const dropzone = document.getElementById('puzzle-dropzone');
+    
+    wordOptions.innerHTML = '';
+    dropzone.innerHTML = 'اسحب الكلمة الصحيحة إلى هنا';
+    dropzone.classList.remove('filled');
+    
+    const word = words[Math.floor(Math.random() * words.length)];
+    
+    puzzleImage.src = word.image;
+    puzzleImage.alt = word.en;
+    
+    const wrongWords = words
+      .filter(w => w.en !== word.en)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+    
+    const allOptions = [word, ...wrongWords].sort(() => Math.random() - 0.5);
+    
+    allOptions.forEach(option => {
+      const div = document.createElement('div');
+      div.className = 'puzzle-option';
+      div.textContent = option.en;
+      div.draggable = true;
+      div.ondragstart = (e) => {
+        e.dataTransfer.setData('text/plain', option.en);
+        e.dataTransfer.setData('correct', option.en === word.en ? 'true' : 'false');
+      };
+      wordOptions.appendChild(div);
+    });
+    
+    dropzone.ondragover = (e) => e.preventDefault();
+    dropzone.ondrop = (e) => {
+      e.preventDefault();
+      const draggedWord = e.dataTransfer.getData('text/plain');
+      const isCorrect = e.dataTransfer.getData('correct') === 'true';
+      
+      dropzone.innerHTML = draggedWord;
+      dropzone.classList.add('filled');
+      
+      if (isCorrect) {
+        dropzone.style.borderColor = '#06D6A0';
+        showNotification(`أحسنت! ${word.en} هي الكلمة الصحيحة للصورة`);
+        
+        const wordIndex = words.findIndex(w => w.en === word.en);
+        if (!learnedWords.has(wordIndex)) {
+          learnedWords.add(wordIndex);
+        }
+      } else {
+        dropzone.style.borderColor = '#F44336';
+        showNotification(`حاول مرة أخرى! الكلمة الصحيحة هي: ${word.en}`);
+      }
+      
+      updateProgress();
+      saveData();
+    };
+  }
+
+  function checkPuzzleAnswer(element, answer) {
+    const correctAnswer = puzzles[currentPuzzleIndex].answer;
+    const resultElement = document.getElementById('puzzle-result');
+    
+    if (answer === correctAnswer) {
+      element.classList.add('correct');
+      resultElement.textContent = `أحسنت! إجابة صحيحة: ${correctAnswer}`;
+      resultElement.style.color = '#06D6A0';
+      showNotification(`ذهبي! حللت اللغز بشكل صحيح`);
+      
+      setTimeout(() => {
+        currentPuzzleIndex = (currentPuzzleIndex + 1) % puzzles.length;
+        updatePuzzleOfDay();
+      }, 3000);
+    } else {
+      element.classList.add('wrong');
+      resultElement.textContent = `حاول مرة أخرى! الإجابة الصحيحة: ${correctAnswer}`;
+      resultElement.style.color = '#F44336';
+    }
+  }
+
+  function updatePuzzleOfDay() {
+    const puzzleContainer = document.getElementById('puzzle-of-day');
+    const puzzle = puzzles[currentPuzzleIndex];
+    
+    puzzleContainer.innerHTML = `
+      <p class="puzzle-question">${puzzle.question}</p>
+      <div class="options">
+        ${puzzle.options.map(option => 
+          `<div class="option" onclick="checkPuzzleAnswer(this, '${option}')">${option}</div>`
+        ).join('')}
+      </div>
+      <p id="puzzle-result" class="score"></p>
+    `;
+  }
+
+  // ================== وظائف السحب والإفلات ==================
+  function initDragAndDrop() {
+    const dropzones = document.querySelectorAll('.puzzle-dropzone, .sentence-area');
+    
+    dropzones.forEach(zone => {
+      zone.ondragover = (e) => e.preventDefault();
+      zone.ondrop = (e) => e.preventDefault();
+    });
+  }
+
+  // ================== وظائف التقدم والإنجازات ==================
+  function createAchievements() {
+    const container = document.getElementById('achievements');
+    const achievements = [
+      { title: "المبتدئ", desc: "تعلم 3 كلمات", icon: "fas fa-seedling", target: 3 },
+      { title: "المتعلّم", desc: "تعلم 10 كلمات", icon: "fas fa-book-reader", target: 10 },
+      { title: "اللاعب", desc: "اكسب 50 نقطة", icon: "fas fa-gamepad", target: 50 },
+      { title: "الكاتب", desc: "كون 5 جمل", icon: "fas fa-pen-fancy", target: 5 },
+      { title: "المشارك", desc: "ادعو 3 أصدقاء", icon: "fas fa-share-alt", target: 3 }
+    ];
+    
+    achievements.forEach(achievement => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      
+      const isAchieved = 
+        (achievement.desc.includes("كلمات") && learnedWords.size >= achievement.target) ||
+        (achievement.desc.includes("نقطة") && (quizScore + spellingScore) >= achievement.target) ||
+        (achievement.desc.includes("جمل") && sentencesBuilt >= achievement.target) ||
+        (achievement.desc.includes("أصدقاء") && invitedFriends >= achievement.target);
+      
+      card.innerHTML = `
+        <div class="word-en" style="color: ${isAchieved ? '#06D6A0' : '#FF6F61'}">
+          <i class="${achievement.icon}"></i> ${achievement.title}
+        </div>
+        <div class="word-ar">${achievement.desc}</div>
+        <div class="sentence">${isAchieved ? '✔ تم الإنجاز' : '⌛ قيد التقدم'}</div>
+      `;
+      
+      container.appendChild(card);
+    });
+  }
+
+  function updateProgress() {
+    document.getElementById('learned-words').textContent = learnedWords.size;
+    document.getElementById('total-words').textContent = words.length;
+    document.getElementById('total-points').textContent = quizScore + spellingScore + friendsPoints;
+    document.getElementById('built-sentences').textContent = sentencesBuilt;
+    
+    const wordsProgress = document.getElementById('words-progress');
+    const pointsProgress = document.getElementById('points-progress');
+    const sentencesProgress = document.getElementById('sentences-progress');
+    
+    wordsProgress.style.width = `${(learnedWords.size / words.length) * 100}%`;
+    pointsProgress.style.width = `${Math.min(((quizScore + spellingScore + friendsPoints) / 500) * 100, 100)}%`;
+    sentencesProgress.style.width = `${Math.min((sentencesBuilt / 10) * 100, 100)}%`;
+    
+    document.getElementById('achievements').innerHTML = '';
+    createAchievements();
+  }
+
+  // ================== وظائف مساعدة ==================
+  function showNotification(text) {
+    const notification = document.getElementById('notification');
+    const notificationText = document.getElementById('notification-text');
+    
+    notificationText.textContent = text;
+    notification.style.display = 'flex';
+    
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 3000);
+  }
+
+  setInterval(() => {
+    currentPuzzleIndex = (currentPuzzleIndex + 1) % puzzles.length;
+    updatePuzzleOfDay();
+  }, 60000);
+
+</script>
+
+</body>
+</html>
